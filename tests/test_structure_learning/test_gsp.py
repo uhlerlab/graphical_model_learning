@@ -4,7 +4,7 @@ import numpy as np
 
 from graphical_models.rand import directed_erdos, rand_weights
 from graphical_model_learning import gsp, permutation2dag, unknown_target_igsp, igsp
-from conditional_independence import kci_test_vector, ki_test_vector, partial_correlation_test
+from conditional_independence import MemoizedCI_Tester, partial_correlation_test, partial_correlation_suffstat
 from conditional_independence import kci_invariance_test, hsic_invariance_test
 import random
 from tqdm import tqdm
@@ -27,17 +27,19 @@ class TestGSP(TestCase):
         for nneighbors in nneighbors_list:
             print('=== nneighbors = %s ===' % nneighbors)
             print("generating DAGs")
-            dags = directed_erdos(nnodes, nneighbors/(nnodes-1), ndags)
+            dags = directed_erdos(nnodes, nneighbors/(nnodes-1), size=ndags)
             print("generating weights")
             gdags = [rand_weights(dag) for dag in dags]
             print("generating samples")
             samples_by_dag = [gdag.sample(nsamples) for gdag in gdags]
-            print("computing correlation matrices")
-            corr_by_dag = [np.corrcoef(samples, rowvar=False) for samples in samples_by_dag]
+
+            print("computing sufficient statistics")
+            suffstats = [partial_correlation_suffstat(samples) for samples in samples_by_dag]
+            ci_testers = [MemoizedCI_Tester(partial_correlation_test, suffstat) for suffstat in suffstats]
             print("running GSP")
             est_dags_and_summaries = [
-                gsp(dict(C=corr, n=nsamples), nnodes, partial_correlation_test, depth=4, nruns=10, alpha=.01)
-                for corr in corr_by_dag
+                gsp(set(range(nnodes)), ci_tester, depth=4, nruns=10)
+                for ci_tester in ci_testers
             ]
             est_dags, summaries = zip(*est_dags_and_summaries)
             # print([str(d) for d in est_dags])
