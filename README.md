@@ -3,6 +3,8 @@
 `graphical_model_learning` is a Python package for learning the structure (and parameters) of graphical models, including
 directed acyclic graphs (DAGs), (maximal) ancestral graphs (MAGs), and undirected graphs.
 
+`graphical_model_learning` is a part of the [causaldag](https://github.com/uhlerlab/causaldag) ecosystem of packages.
+
 ### Install
 Install the latest version of `graphical_model_learning`:
 ```
