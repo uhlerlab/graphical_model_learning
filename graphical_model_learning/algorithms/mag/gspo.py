@@ -2,6 +2,7 @@ from graphical_model_learning.algorithms.dag import permutation2dag, min_degree_
 from graphical_model_learning.algorithms.undirected import threshold_ug
 import random
 import itertools as itr
+from graphical_models import AncestralGraph
 
 
 def apply_lmc(imap, i, j):
@@ -13,7 +14,7 @@ def apply_lmc(imap, i, j):
         imap.add_directed(i, j)
 
 
-def get_lmc_altered_edges(imap: cd.AncestralGraph, i, j, ci_tester):
+def get_lmc_altered_edges(imap: AncestralGraph, i, j, ci_tester):
     """
     Given an IMAP and a legitimate mark change applied to it, test which edges can be removed after the legitimate
     mark change.

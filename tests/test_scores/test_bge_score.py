@@ -1,6 +1,5 @@
 from unittest import TestCase
 import sys
-sys.path.insert(1, "C:/Users/skarn/OneDrive/Documents/MIT/year_3/SuperUROP/causaldag")
 import unittest
 import numpy as np
 import subprocess
