@@ -18,7 +18,21 @@ Documentation is available at https://graphical_model_learning.readthedocs.io/en
 ### Simple Example
 
 ```
->>> import graphical_model_learning
+>>> from graphical_model_learning import pcalg
+>>> from graphical_models.rand import directed_erdos, rand_weights
+>>> from conditional_independence import MemoizedCI_Tester
+>>> from conditional_independence import partial_correlation_suffstat, partial_correlation_test
+>>> import numpy as np
+>>> np.random.seed(1221)
+>>> nnodes = 10
+>>> d = directed_erdos(nnodes, .2)
+>>> g = rand_weights(d)
+>>> samples = g.sample(300)
+>>> suffstat = partial_correlation_suffstat(samples)
+>>> ci_tester = MemoizedCI_Tester(partial_correlation_test, suffstat)
+>>> estimated_graph = pcalg(set(range(nnodes)), ci_tester)
+>>> d.shd_skeleton(estimated_graph)
+1
 ```
 
 ### License
