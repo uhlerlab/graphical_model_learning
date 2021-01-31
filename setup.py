@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='graphical_model_learning',
-    version='0.1a.002',
+    version='0.1a.003',
     description='',
     long_description='',
     author='',
@@ -20,8 +20,8 @@ setuptools.setup(
         'conditional_independence',
         'graphical_models',
         'tqdm',
-        'numba',
-        'scipy'
+        'scipy',
+        'matplotlib'
     ]
 )
 

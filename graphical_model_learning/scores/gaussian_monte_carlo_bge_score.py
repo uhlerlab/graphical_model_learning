@@ -1,5 +1,4 @@
 import numpy as np
-import numba
 import scipy as sp
 from scipy import stats
 from scipy.special import loggamma
@@ -7,10 +6,7 @@ import math
 import ipdb
 import sys
 
-sys.path.insert(1, "C:/Users/skarn/OneDrive/Documents/MIT/year_3/SuperUROP/causaldag")
 
-
-@numba.jit
 def numba_inv(A):
     return np.linalg.inv(A)
 

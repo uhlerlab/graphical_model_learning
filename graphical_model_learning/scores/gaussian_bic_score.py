@@ -1,7 +1,5 @@
 import numpy as np
-import numba
 
-@numba.jit
 def numba_inv(A):
     return np.linalg.inv(A)
 

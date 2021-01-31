@@ -19,9 +19,9 @@ sys.path.insert(0, os.path.abspath(os.path.join('..')))
 
 # -- Project information -----------------------------------------------------
 
-project = 'template'
-copyright = 'Year, Author'
-author = 'Author'
+project = 'graphical_model_learning'
+copyright = '2021, Chandler Squires'
+author = 'Chandler Squires'
 
 # The short X.Y version
 version = ''
@@ -112,7 +112,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'templatedoc'
+htmlhelp_basename = 'graphical_model_learningdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -139,7 +139,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'template.tex', 'template Documentation',
+    (master_doc, 'graphical_model_learning.tex', 'graphical_model_learning Documentation',
      'Chandler Squires', 'manual'),
 ]
 
@@ -149,7 +149,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'template', 'template Documentation',
+    (master_doc, 'graphical_model_learning', 'graphical_model_learning Documentation',
      [author], 1)
 ]
 
@@ -160,8 +160,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'template', 'template Documentation',
-     author, 'template', 'One line description of project.',
+    (master_doc, 'graphical_model_learning', 'graphical_model_learning Documentation',
+     author, 'graphical_model_learning', 'One line description of project.',
      'Miscellaneous'),
 ]
 
