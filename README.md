@@ -1,7 +1,17 @@
 [![codecov](https://codecov.io/gh/uhlerlab/causaldag/branch/master/graph/badge.svg?token=RSM00FKU9A)](https://codecov.io/gh/uhlerlab/causaldag)
 
 `graphical_model_learning` is a Python package for learning the structure (and parameters) of graphical models, including
-directed acyclic graphs (DAGs), (maximal) ancestral graphs (MAGs), and undirected graphs.
+directed acyclic graphs (DAGs), (maximal) ancestral graphs (MAGs), and undirected graphs. This includes
+classical structure learning algorithms, Bayesian methods, and active learning methods.
+
+Structure learning algorithms include:
+* PC algorithm
+* Greedy Sparsest Permutation (GSP) algorithm
+* Interventional and Unknown-Target Interventional GSP (IGSP and UT-IGSP)
+
+We plan to include:
+* Greedy Equivalence Search (GES) algorithm
+* Minimal IMAP MCMC
 
 `graphical_model_learning` is a part of the [causaldag](https://github.com/uhlerlab/causaldag) ecosystem of packages.
 
