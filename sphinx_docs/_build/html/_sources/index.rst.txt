@@ -4,7 +4,7 @@ Welcome to graphical_model_learning's documentation!
 .. toctree::
    :maxdepth: 2
 
-   main/index
+   dags/index
 
 
 Indices and tables

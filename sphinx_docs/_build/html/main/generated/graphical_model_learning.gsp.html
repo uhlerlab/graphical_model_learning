@@ -34,8 +34,7 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Template" href="../index.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,14 +79,11 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Template</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#methods">Methods</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">graphical_model_learning.gsp</a></li>
-</ul>
-</li>
-</ul>
-</li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Learning from Observational Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#learning-from-interventional-data">Learning from Interventional Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#bayesian-methods">Bayesian Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#active-learning">Active Learning</a></li>
 </ul>
 
             
@@ -134,8 +130,6 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../index.html">Template</a> &raquo;</li>
-        
       <li>graphical_model_learning.gsp</li>
     
     
@@ -157,45 +151,6 @@
             
   <div class="section" id="graphical-model-learning-gsp">
 <h1>graphical_model_learning.gsp<a class="headerlink" href="#graphical-model-learning-gsp" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
-<dt id="graphical_model_learning.gsp">
-<code class="sig-prename descclassname">graphical_model_learning.</code><code class="sig-name descname">gsp</code><span class="sig-paren">(</span><em class="sig-param">nodes: set, ci_tester: conditional_independence.ci_tests.ci_tester.CI_Tester, depth: Optional[int] = 4, nruns: int = 5, verbose: bool = False, initial_undirected: Optional[Union[str, graphical_models.classes.undirected.undirected_graph.UndirectedGraph]] = 'threshold', initial_permutations: Optional[List] = None, fixed_orders={}, fixed_adjacencies={}, fixed_gaps={}, use_lowest=True, max_iters=inf, factor=2, progress_bar=False, summarize=False) -&gt; (&lt;class 'graphical_models.classes.dags.dag.DAG'&gt;, typing.List[typing.List[typing.Dict]]</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/graphical_model_learning/algorithms/dag/gsp.html#gsp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#graphical_model_learning.gsp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Estimate the Markov equivalence class of a DAG using the Greedy Sparsest Permutations (GSP) algorithm.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>nodes</strong> – Labels of nodes in the graph.</p></li>
-<li><p><strong>ci_tester</strong> – A conditional independence tester, which has a method is_ci taking two sets A and B, and a conditioning set C,
-and returns True/False.</p></li>
-<li><p><strong>depth</strong> – Maximum depth in depth-first search. Use None for infinite search depth.</p></li>
-<li><p><strong>nruns</strong> – Number of runs of the algorithm. Each run starts at a random permutation and the sparsest DAG from all
-runs is returned.</p></li>
-<li><p><strong>verbose</strong> – TODO</p></li>
-<li><p><strong>initial_undirected</strong> – Option to find the starting permutation by using the minimum degree algorithm on an undirected graph that is
-Markov to the data. You can provide the undirected graph yourself, use the default ‘threshold’ to do simple
-thresholding on the partial correlation matrix, or select ‘None’ to start at a random permutation.</p></li>
-<li><p><strong>initial_permutations</strong> – A list of initial permutations with which to start the algorithm. This option is helpful when there is
-background knowledge on orders. This option is mutually exclusive with initial_undirected.</p></li>
-<li><p><strong>fixed_orders</strong> – Tuples (i, j) where i is known to come before j.</p></li>
-<li><p><strong>fixed_adjacencies</strong> – Tuples (i, j) where i and j are known to be adjacent.</p></li>
-<li><p><strong>fixed_gaps</strong> – Tuples (i, j) where i and j are known to be non-adjacent.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcalg</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">igsp</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">unknown_target_igsp</span></code></p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>(est_dag, summaries)</p>
-</dd>
-</dl>
-</dd></dl>
-
 </div>
 
 
@@ -203,13 +158,6 @@ background knowledge on orders. This option is mutually exclusive with initial_u
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../index.html" class="btn btn-neutral float-left" title="Template" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

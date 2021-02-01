@@ -35,6 +35,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="graphical_model_learning.gsp" href="generated/graphical_model_learning.gsp.html" />
     <link rel="prev" title="Welcome to graphical_model_learning’s documentation!" href="../index.html" /> 
 </head>
 
@@ -81,8 +82,16 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Learning from Observational Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#learning-from-interventional-data">Learning from Interventional Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Learning from Observational Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/graphical_model_learning.gsp.html">graphical_model_learning.gsp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/graphical_model_learning.pcalg.html">graphical_model_learning.pcalg</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#learning-from-interventional-data">Learning from Interventional Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/graphical_model_learning.igsp.html">graphical_model_learning.igsp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/graphical_model_learning.unknown_target_igsp.html">graphical_model_learning.unknown_target_igsp</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="#bayesian-methods">Bayesian Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#active-learning">Active Learning</a></li>
 </ul>
@@ -137,7 +146,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/main/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/dags/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -158,6 +167,12 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/graphical_model_learning.gsp.html#graphical_model_learning.gsp" title="graphical_model_learning.gsp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gsp</span></code></a>(nodes, ci_tester[, depth, nruns, …])</p></td>
+<td><p>Estimate the Markov equivalence class of a DAG using the Greedy Sparsest Permutations (GSP) algorithm.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/graphical_model_learning.pcalg.html#graphical_model_learning.pcalg" title="graphical_model_learning.pcalg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcalg</span></code></a>(nodes[, ci_tester, skel, sepset, …])</p></td>
+<td><p>Use the PC (Peters-Clark) algorithm to estimate the Markov equivalence class of the data-generating DAG.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -169,6 +184,12 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/graphical_model_learning.igsp.html#graphical_model_learning.igsp" title="graphical_model_learning.igsp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">igsp</span></code></a>(setting_list, nodes, ci_tester, …[, …])</p></td>
+<td><p>TODO</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/graphical_model_learning.unknown_target_igsp.html#graphical_model_learning.unknown_target_igsp" title="graphical_model_learning.unknown_target_igsp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unknown_target_igsp</span></code></a>(setting_list, nodes, …)</p></td>
+<td><p>Use the Unknown Target Interventional Greedy Sparsest Permutation algorithm to estimate a DAG in the I-MEC of the data-generating DAG.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -186,6 +207,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="generated/graphical_model_learning.gsp.html" class="btn btn-neutral float-right" title="graphical_model_learning.gsp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to graphical_model_learning’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

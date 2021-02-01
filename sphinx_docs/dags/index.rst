@@ -1,4 +1,4 @@
-.. _template:
+.. _graphical_model_learning:
 
 .. currentmodule:: graphical_model_learning
 

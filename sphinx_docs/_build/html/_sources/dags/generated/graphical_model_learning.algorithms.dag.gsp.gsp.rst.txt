@@ -1,0 +1,6 @@
+﻿graphical\_model\_learning.algorithms.dag.gsp.gsp
+=================================================
+
+.. currentmodule:: graphical_model_learning.algorithms.dag.gsp
+
+.. autofunction:: gsp

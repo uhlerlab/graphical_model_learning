@@ -1,0 +1,6 @@
+﻿graphical\_model\_learning.algorithms.dag.gsp.unknown\_target\_igsp
+===================================================================
+
+.. currentmodule:: graphical_model_learning.algorithms.dag.gsp
+
+.. autofunction:: unknown_target_igsp

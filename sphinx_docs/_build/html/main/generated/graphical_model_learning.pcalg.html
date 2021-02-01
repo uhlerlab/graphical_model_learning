@@ -34,9 +34,7 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="graphical_model_learning.igsp" href="graphical_model_learning.igsp.html" />
-    <link rel="prev" title="graphical_model_learning.gsp" href="graphical_model_learning.gsp.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,12 +79,8 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Learning from Observational Data</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="graphical_model_learning.gsp.html">graphical_model_learning.gsp</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">graphical_model_learning.pcalg</a></li>
-</ul>
-</li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Learning from Observational Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#learning-from-interventional-data">Learning from Interventional Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#bayesian-methods">Bayesian Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#active-learning">Active Learning</a></li>
@@ -136,8 +130,6 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../index.html">Learning from Observational Data</a> &raquo;</li>
-        
       <li>graphical_model_learning.pcalg</li>
     
     
@@ -159,38 +151,6 @@
             
   <div class="section" id="graphical-model-learning-pcalg">
 <h1>graphical_model_learning.pcalg<a class="headerlink" href="#graphical-model-learning-pcalg" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
-<dt id="graphical_model_learning.pcalg">
-<code class="sig-prename descclassname">graphical_model_learning.</code><code class="sig-name descname">pcalg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nodes</span></em>, <em class="sig-param"><span class="n">ci_tester</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>conditional_independence.ci_tests.ci_tester.CI_Tester<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sepset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">solve_conflict</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">max_cond_set</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; graphical_models.classes.dags.pdag.PDAG<a class="reference internal" href="../../_modules/graphical_model_learning/algorithms/dag/pcalg.html#pcalg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#graphical_model_learning.pcalg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use the PC (Peters-Clark) algorithm to estimate the Markov equivalence class of the data-generating DAG.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>nodes</strong> – Labels of nodes in the graph.</p></li>
-<li><p><strong>ci_tester</strong> – A conditional independence tester, which has a method is_ci taking two sets A and B, and a conditioning set C,
-and returns True/False.</p></li>
-<li><p><strong>skel</strong> – An estimated skeleton. If not provided, uses the <cite>skeleton</cite> method to estimate.</p></li>
-<li><p><strong>sepset</strong> – The separating sets for non-adjacent nodes in the estimated skeleton.</p></li>
-<li><p><strong>solve_conflict</strong> – If False, any disagreements on v-structures are simply overwritten. If True, allow both orientations
-(represented by a bidirected edge).</p></li>
-<li><p><strong>verbose</strong> – If True, print decisions made by the algorithm.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="graphical_model_learning.gsp.html#graphical_model_learning.gsp" title="graphical_model_learning.gsp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gsp</span></code></a></p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>est_dag</p>
-</dd>
-</dl>
-</dd></dl>
-
 </div>
 
 
@@ -198,15 +158,6 @@ and returns True/False.</p></li>
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="graphical_model_learning.igsp.html" class="btn btn-neutral float-right" title="graphical_model_learning.igsp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="graphical_model_learning.gsp.html" class="btn btn-neutral float-left" title="graphical_model_learning.gsp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

@@ -80,10 +80,10 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../main/index.html">Learning from Observational Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../main/index.html#learning-from-interventional-data">Learning from Interventional Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../main/index.html#bayesian-methods">Bayesian Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../main/index.html#active-learning">Active Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dags/index.html">Learning from Observational Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dags/index.html#learning-from-interventional-data">Learning from Interventional Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dags/index.html#bayesian-methods">Bayesian Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dags/index.html#active-learning">Active Learning</a></li>
 </ul>
 
             
@@ -507,7 +507,7 @@
     <span class="k">return</span> <span class="n">est_dag</span><span class="p">,</span> <span class="n">learned_intervention_targets</span>
 
 
-<div class="viewcode-block" id="gsp"><a class="viewcode-back" href="../../../../main/generated/graphical_model_learning.gsp.html#graphical_model_learning.gsp">[docs]</a><span class="k">def</span> <span class="nf">gsp</span><span class="p">(</span>
+<div class="viewcode-block" id="gsp"><a class="viewcode-back" href="../../../../dags/generated/graphical_model_learning.gsp.html#graphical_model_learning.gsp">[docs]</a><span class="k">def</span> <span class="nf">gsp</span><span class="p">(</span>
         <span class="n">nodes</span><span class="p">:</span> <span class="nb">set</span><span class="p">,</span>
         <span class="n">ci_tester</span><span class="p">:</span> <span class="n">CI_Tester</span><span class="p">,</span>
         <span class="n">depth</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
@@ -688,7 +688,7 @@
         <span class="k">return</span> <span class="n">min_dag</span></div>
 
 
-<div class="viewcode-block" id="igsp"><a class="viewcode-back" href="../../../../main/generated/graphical_model_learning.igsp.html#graphical_model_learning.igsp">[docs]</a><span class="k">def</span> <span class="nf">igsp</span><span class="p">(</span>
+<div class="viewcode-block" id="igsp"><a class="viewcode-back" href="../../../../dags/generated/graphical_model_learning.igsp.html#graphical_model_learning.igsp">[docs]</a><span class="k">def</span> <span class="nf">igsp</span><span class="p">(</span>
         <span class="n">setting_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">],</span>
         <span class="n">nodes</span><span class="p">:</span> <span class="nb">set</span><span class="p">,</span>
         <span class="n">ci_tester</span><span class="p">:</span> <span class="n">CI_Tester</span><span class="p">,</span>
@@ -917,7 +917,7 @@
     <span class="k">return</span> <span class="kc">True</span>
 
 
-<div class="viewcode-block" id="unknown_target_igsp"><a class="viewcode-back" href="../../../../main/generated/graphical_model_learning.unknown_target_igsp.html#graphical_model_learning.unknown_target_igsp">[docs]</a><span class="k">def</span> <span class="nf">unknown_target_igsp</span><span class="p">(</span>
+<div class="viewcode-block" id="unknown_target_igsp"><a class="viewcode-back" href="../../../../dags/generated/graphical_model_learning.unknown_target_igsp.html#graphical_model_learning.unknown_target_igsp">[docs]</a><span class="k">def</span> <span class="nf">unknown_target_igsp</span><span class="p">(</span>
         <span class="n">setting_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">],</span>
         <span class="n">nodes</span><span class="p">:</span> <span class="nb">set</span><span class="p">,</span>
         <span class="n">ci_tester</span><span class="p">:</span> <span class="n">CI_Tester</span><span class="p">,</span>

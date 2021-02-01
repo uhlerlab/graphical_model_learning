@@ -15,7 +15,6 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join('..')))
-from graphical_model_learning import *
 
 
 # -- Project information -----------------------------------------------------
@@ -49,7 +48,14 @@ extensions = [
 
 autosummary_generate = True
 autodoc_mock_imports = [
-    'numpy',
+    # 'numpy',
+    # 'networkx',
+    # 'scipy',
+    # 'tqdm',
+    # 'matplotlib',
+    # 'numexpr'
+    # 'conditional_independence',
+    # 'graphical_models',
 ]
 latex_paper_size = 'letter'
 

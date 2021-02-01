@@ -1,6 +1,6 @@
 .. _graphical_model_learning:
 
-.. currentmodule:: graphical_model_learning.algorithms.dag.gsp
+.. currentmodule:: graphical_model_learning
 
 ================================
 Learning from Observational Data
@@ -10,6 +10,7 @@ Learning from Observational Data
    :toctree: generated
 
    gsp
+   pcalg
 
 
 =================================
