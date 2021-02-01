@@ -3,26 +3,7 @@
 ******************
 Structure Learning
 ******************
-.. currentmodule:: graphical_model_learning.algorithms
-
-=============================
-Undirected Structure Learning
-=============================
-
-.. autosummary::
-   :toctree: generated
-
-   partial_correlation_threshold
-   threshold_ug
-
-=============================
-Covariance Structure Learning
-=============================
-
-.. autosummary::
-   :toctree: generated
-
-   covariance_graph_gauss
+.. currentmodule:: graphical_model_learning
 
 =============================
 DAG Structure Learning
@@ -34,3 +15,10 @@ DAG Structure Learning
    permutation2dag
    sparsest_permutation
    gsp
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
