@@ -1,16 +1,33 @@
 .. _template:
 
-********
-Template
-********
-
 .. currentmodule:: graphical_model_learning
 
-=======
-Methods
-=======
+================================
+Learning from Observational Data
+================================
 
 .. autosummary::
    :toctree: generated
 
    gsp
+   pcalg
+
+
+=================================
+Learning from Interventional Data
+=================================
+
+.. autosummary::
+   :toctree: generated
+
+   igsp
+   unknown_target_igsp
+
+
+================
+Bayesian Methods
+================
+
+================
+Active Learning
+================

@@ -1,4 +1,4 @@
-Welcome to template_package's documentation!
+Welcome to graphical_model_learning's documentation!
 ====================================================
 
 .. toctree::
