@@ -1,20 +1,11 @@
-.. _structure_learning:
+Welcome to template_package's documentation!
+====================================================
 
-******************
-Structure Learning
-******************
-.. currentmodule:: graphical_model_learning
+.. toctree::
+   :maxdepth: 2
 
-=============================
-DAG Structure Learning
-=============================
+   main/index
 
-.. autosummary::
-   :toctree: generated
-
-   permutation2dag
-   sparsest_permutation
-   gsp
 
 Indices and tables
 ==================

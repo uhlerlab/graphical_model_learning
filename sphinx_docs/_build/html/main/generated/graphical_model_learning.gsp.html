@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>graphical_model_learning.gsp &mdash; graphical_model_learning  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> graphical_model_learning
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Template</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">graphical_model_learning</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>graphical_model_learning.gsp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/main/generated/graphical_model_learning.gsp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="graphical-model-learning-gsp">
+<h1>graphical_model_learning.gsp<a class="headerlink" href="#graphical-model-learning-gsp" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="graphical_model_learning.gsp">
+<code class="sig-prename descclassname">graphical_model_learning.</code><code class="sig-name descname">gsp</code><span class="sig-paren">(</span><em class="sig-param">nodes: set, ci_tester: conditional_independence.ci_tests.ci_tester.CI_Tester, depth: Optional[int] = 4, nruns: int = 5, verbose: bool = False, initial_undirected: Optional[Union[str, graphical_models.classes.undirected.undirected_graph.UndirectedGraph]] = 'threshold', initial_permutations: Optional[List] = None, fixed_orders={}, fixed_adjacencies={}, fixed_gaps={}, use_lowest=True, max_iters=inf, factor=2, progress_bar=False, summarize=False) -&gt; (&lt;class 'graphical_models.classes.dags.dag.DAG'&gt;, typing.List[typing.List[typing.Dict]]</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/graphical_model_learning/algorithms/dag/gsp.html#gsp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#graphical_model_learning.gsp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate the Markov equivalence class of a DAG using the Greedy Sparsest Permutations (GSP) algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodes</strong> – Labels of nodes in the graph.</p></li>
+<li><p><strong>ci_tester</strong> – A conditional independence tester, which has a method is_ci taking two sets A and B, and a conditioning set C,
+and returns True/False.</p></li>
+<li><p><strong>depth</strong> – Maximum depth in depth-first search. Use None for infinite search depth.</p></li>
+<li><p><strong>nruns</strong> – Number of runs of the algorithm. Each run starts at a random permutation and the sparsest DAG from all
+runs is returned.</p></li>
+<li><p><strong>verbose</strong> – TODO</p></li>
+<li><p><strong>initial_undirected</strong> – Option to find the starting permutation by using the minimum degree algorithm on an undirected graph that is
+Markov to the data. You can provide the undirected graph yourself, use the default ‘threshold’ to do simple
+thresholding on the partial correlation matrix, or select ‘None’ to start at a random permutation.</p></li>
+<li><p><strong>initial_permutations</strong> – A list of initial permutations with which to start the algorithm. This option is helpful when there is
+background knowledge on orders. This option is mutually exclusive with initial_undirected.</p></li>
+<li><p><strong>fixed_orders</strong> – Tuples (i, j) where i is known to come before j.</p></li>
+<li><p><strong>fixed_adjacencies</strong> – Tuples (i, j) where i and j are known to be adjacent.</p></li>
+<li><p><strong>fixed_gaps</strong> – Tuples (i, j) where i and j are known to be non-adjacent.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcalg</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">igsp</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">unknown_target_igsp</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(est_dag, summaries)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Year, Author.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

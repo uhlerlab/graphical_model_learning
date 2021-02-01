@@ -15,14 +15,14 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join('..')))
-print(sys.path)
+from graphical_model_learning import *
 
 
 # -- Project information -----------------------------------------------------
 
 project = 'graphical_model_learning'
-copyright = '2021, Chandler Squires'
-author = 'Chandler Squires'
+copyright = 'Year, Author'
+author = 'Author'
 
 # The short X.Y version
 version = ''
@@ -113,7 +113,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'graphical_model_learningdoc'
+htmlhelp_basename = 'templatedoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
