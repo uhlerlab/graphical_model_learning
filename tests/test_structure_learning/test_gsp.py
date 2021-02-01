@@ -35,13 +35,12 @@ class TestGSP(TestCase):
 
             print("computing sufficient statistics")
             suffstats = [partial_correlation_suffstat(samples) for samples in samples_by_dag]
-            ci_testers = [MemoizedCI_Tester(partial_correlation_test, suffstat) for suffstat in suffstats]
+            ci_testers = [MemoizedCI_Tester(partial_correlation_test, suffstat, alpha=0.1) for suffstat in suffstats]
             print("running GSP")
-            est_dags_and_summaries = [
+            est_dags = [
                 gsp(set(range(nnodes)), ci_tester, depth=4, nruns=10)
                 for ci_tester in ci_testers
             ]
-            est_dags, summaries = zip(*est_dags_and_summaries)
             # print([str(d) for d in est_dags])
             shd_by_dag = np.array([est_dag.shd_skeleton(dag) for est_dag, dag in zip(est_dags, dags)])
             match_by_dag = np.sum(shd_by_dag == 0)
