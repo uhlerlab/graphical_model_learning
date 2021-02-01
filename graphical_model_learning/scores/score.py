@@ -25,14 +25,13 @@ class MemoizedDecomposableScore:
 
 if __name__ == '__main__':
     import sys
-    sys.path.insert(1, "C:/Users/skarn/OneDrive/Documents/MIT/year_3/SuperUROP/causaldag")
     import numpy as np
-    from causaldag.rand import rand_weights, directed_erdos
-    from causaldag import GaussIntervention
+    from graphical_models.rand import rand_weights, directed_erdos
+    from graphical_models import GaussIntervention
     from conditional_independence import partial_correlation_suffstat
-    from causaldag.utils.scores.gaussian_ibge_score import local_bayesian_regression_bge_score, local_gaussian_interventional_bge_score
-    from causaldag.utils.scores.gaussian_bic_score import local_gaussian_bic_score, local_gaussian_interventional_bic_score
-    from causaldag.utils.suffstats.gaussian_interventional_suffstat import compute_gaussian_interventional_suffstat
+    from graphical_model_learning.scores.gaussian_ibge_score import local_bayesian_regression_bge_score, local_gaussian_interventional_bge_score
+    from graphical_model_learning.scores.gaussian_bic_score import local_gaussian_bic_score, local_gaussian_interventional_bic_score
+    from graphical_model_learning.suffstats.gaussian_interventional_suffstat import compute_gaussian_interventional_suffstat
 
     # d = directed_erdos(10, .5)
     # g = rand_weights(d)

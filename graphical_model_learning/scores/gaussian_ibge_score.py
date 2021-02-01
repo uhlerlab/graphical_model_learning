@@ -4,10 +4,9 @@ from scipy.special import loggamma
 import math
 import ipdb
 import sys
-sys.path.insert(1, "C:/Users/skarn/OneDrive/Documents/MIT/year_3/SuperUROP/causaldag")
 
-from causaldag.utils.ci_tests import partial_monte_carlo_correlation_suffstat, partial_correlation_suffstat
-from causaldag.utils.scores.gaussian_bge_score import local_gaussian_bge_score
+from conditional_independence import partial_correlation_suffstat
+from graphical_model_learning import local_gaussian_bge_score
 
 def numba_inv(A):
     return np.linalg.inv(A)

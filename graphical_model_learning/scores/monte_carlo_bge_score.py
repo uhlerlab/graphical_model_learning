@@ -1,12 +1,8 @@
 import sys
-
-sys.path.insert(1, "C:/Users/skarn/OneDrive/Documents/MIT/year_3/SuperUROP/causaldag")
-
 from graphical_model_learning.scores.monte_carlo_marginal_likelihood import monte_carlo_local_marginal_likelihood, monte_carlo_global_marginal_likelihood
 from graphical_model_learning.scores import gaussian_log_likelihood
 from functools import partial
 import numpy as np
-import numba
 import scipy as sp
 from scipy import stats
 from scipy.special import loggamma
@@ -17,7 +13,6 @@ from tqdm import tqdm
 from scipy.linalg import ldl
 
 
-@numba.jit
 def numba_inv(A):
     return np.linalg.inv(A)
 
