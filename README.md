@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/uhlerlab/graphical_model_learning.svg?branch=main)](https://travis-ci.com/uhlerlab/graphical_model_learning)
 [![codecov](https://codecov.io/gh/uhlerlab/causaldag/branch/master/graph/badge.svg?token=RSM00FKU9A)](https://codecov.io/gh/uhlerlab/causaldag)
 
 `graphical_model_learning` is a Python package for learning the structure (and parameters) of graphical models, including
