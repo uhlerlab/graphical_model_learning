@@ -1,3 +1,4 @@
+[![PyPI version](https://badge.fury.io/py/graphical_model_learning.svg)](https://badge.fury.io/py/graphical_model_learning)
 [![Build Status](https://travis-ci.com/uhlerlab/graphical_model_learning.svg?branch=main)](https://travis-ci.com/uhlerlab/graphical_model_learning)
 [![codecov](https://codecov.io/gh/uhlerlab/graphical_model_learning/branch/main/graph/badge.svg?token=ZGC1RZUFOH)](https://codecov.io/gh/uhlerlab/graphical_model_learning)
 
