@@ -121,7 +121,7 @@ def sparsest_permutation(nodes, ci_tester, progress=False):
 
     Examples
     --------
-    >>> from causaldag.utils.ci_tests import MemoizedCI_Tester, partial_correlation_test, partial_correlation_suffstat
+    >>> from causaldag import MemoizedCI_Tester, partial_correlation_test, partial_correlation_suffstat
     >>> import causaldag as cd
     >>> import random
     >>> import numpy as np
