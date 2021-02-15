@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='graphical_model_learning',
-    version='0.1a.005',
+    version='0.1a.006',
     description='',
     long_description='',
     author='',
