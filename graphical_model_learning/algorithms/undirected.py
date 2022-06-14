@@ -41,9 +41,9 @@ def partial_correlation_threshold(precision, n=None, alpha=None):
         statistic = sqrt(n - n_cond - 3) * abs(.5 * log1p(2*r/(1 - r)))
 
     p_values = 1 - .5*(1 + erf(statistic/sqrt(2)))
-
+    fill_diagonal(p_values, 0)
     zero_ixs = p_values > alpha
-    fill_diagonal(zero_ixs, False)
+    
     r[zero_ixs] = 0
 
     return r * sqrt(diagonal(precision))*sqrt(diagonal(precision))[:, None]
